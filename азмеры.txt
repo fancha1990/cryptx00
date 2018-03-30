@@ -1,0 +1,35 @@
+1 video - 1080px
+  header(menu) - 100px
+  video - 500px
+  text+btn - 315px
+
+2 phone - 900px
+
+3 funds - 650px
+  hi->ul || btn->low - 180px
+  ul - 75px
+  padding.li - 75px
+  ul->text - 80px
+  text->btn - 60px
+  (ul+text+btn) - 295px
+
+4 welcom cryptlad - 585px
+  hi->text || text->low- 125px
+  text(all) - 335px
+  text.title - 35px
+  text.title->text.short_descr - 55px
+  text.short_title->text.descr - 40px
+  text.descr - 195px
+
+5 who me - 915px
+ hi->quation || optins->low - 170px
+ quation - 12px
+ title - 110px
+ title->option - 50px
+ options - 500px
+ option - 120 //width=80px
+ option.icon - 60px
+ option.description - 70px
+ 
+
+-----------------

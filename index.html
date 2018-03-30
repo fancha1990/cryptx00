@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Сrypto Land Fund</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon/favicon-16x16.png" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="sass/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="head container-fluid">
+            <div class="up-block row">
+
+                <div class="first-block col">
+                    <div class="logo col">
+                        <img src="img/logo-print.png" alt="">
+                    </div>
+                    <div class="icon col">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-telegram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <div class="lang col">
+                        <ul>
+                            <li><a href="#">русский</a></li>
+                        </ul>
+                    </div>
+                </div><!--first-block-->
+
+                <div class="second-block col">
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li class="menu__item">
+                                    <a href="#">главное</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#">о нас</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#">инвесторам</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#">агентам</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#">контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div><!--menu-->
+
+                    <!-- Блок `search-form` -->
+                    <form class="search-form">
+                        <button class="search-form__button">кабинет</button>
+                        <button class="search-form__button">регистрация</button>
+                    </form>
+                </div><!--second-block-->
+
+            </div><!--header-->
+        </header>
+
+
+        <div class="container">
+            <div class="first-block__container">
+                <h1>crypto land fund</h1>
+                <p>в Крипто Земельном Фонде<br> существе 4 вида инвест-кейсов:
+                </p>
+                <!--button рядом с видео-->
+                <button class="container__button">открыть кейс</button>
+            </div><!--first-block__container-->
+
+            <!-- video block-->
+            <div class="second-block__container">
+                <video width="500" height="500" controls></video>
+            </div>
+        </div><!--container-->
+
+        <!--Промоушн блок-->
+        <div class="min-container">
+            <img src="" alt="">
+        </div>
+
+        <!--третий блок с меню-->
+        <div class="main-content">
+            <div class="main-content__menu container">
+                <nav class="row justify-content-center">
+                    <ul class="funds row col-8">
+                        <li class="funds_item col active" id="fund_it_numb1" onclick="addClassActive(this)"><p class="funds_item_name">crypto land fund</p></li>
+                        <li class="funds_item col" id="fund_it_numb2" onclick="addClassActive(this)"><p class="funds_item_name">crypto land fund2</p></li>
+                        <li class="funds_item col" id="fund_it_numb3" onclick="addClassActive(this)"><p class="funds_item_name">crypto land fund3</p></li>
+                        <li class="funds_item col" id="fund_it_numb4" onclick="addClassActive(this)"><p class="funds_item_name">crypto land fund4</p></li>
+                    </ul>
+                </nav>
+            </div><!--main-content__menu-->
+            <script>
+              function addClassActive(x)
+              {
+                
+                var className = $(x).attr('class');
+                //console.log(className);
+                var pathToLi = "ul.funds li." + className;
+                //console.log(pathToLi);
+                
+                $(pathToLi).removeClass('active');
+                //$(pathToLi).addClass("55");
+                //return;
+                $(x).addClass("active");
+                /*
+                className1 = $(x).attr('class');
+                console.log(className1);
+                */
+
+                var idName = $(x).attr('id');
+                var num = parseInt(idName.replace(/\D+/g,""));
+                //console.log(num);
+
+                $('div.main-content__text').removeClass('vsbl');
+                $('#fund_it_cont' + num).addClass('vsbl');
+                //если id такой-то, то блоку такому-то даем vsbl класс
+
+              }
+            </script>
+
+            <!-- 1 -->
+            <div class="main-content__text vsbl" id="fund_it_cont1">
+                <h2 class="main-content__descrpt">Trust management of your investments in the<br> most liquid markets of the world1</h2>
+                <button class="main-content__btn">Принять участие</button>
+            </div>
+            <!-- 1_end -->
+
+            <!-- 2 -->
+            <div class="main-content__text" id="fund_it_cont2">
+                <h2 class="main-content__descrpt">Trust management of your investments in the<br> most liquid markets of the world2</h2>
+                <button class="main-content__btn">Принять участие</button>
+            </div>
+            <!-- 2_end -->
+
+            <!-- 3 -->
+            <div class="main-content__text" id="fund_it_cont3">
+                <h2 class="main-content__descrpt">Trust management of your investments in the<br> most liquid markets of the world3</h2>
+                <button class="main-content__btn">Принять участие</button>
+            </div>
+            <!-- 3_end -->
+
+            <!-- 4 -->
+            <div class="main-content__text" id="fund_it_cont4">
+                <h2 class="main-content__descrpt">Trust management of your investments in the<br> most liquid markets of the world4</h2>
+                <button class="main-content__btn">Принять участие</button>
+            </div>
+            <!-- 4_end -->
+
+        </div><!--main-content-->
+
+        <!--блок с презентацией-->
+        <div class="present-content">
+            <div class="first-block__present">
+                <video width="500" height="500" controls></video>
+            </div>
+            <div class="second-block__present">
+                <h1>welcome to crypto land fund</h1>
+                <p>trust managment</p>
+                <p>The operating principle of Resonance Capital trust management is to transfer your funds for<br> operations with currency pairs, securities (mostly Penny Stocks) and cryptocurrencies.</p>
+                <p>Our company has strong monthly profits - between 16 and 26%, part of which (4-6%) is<br> transferred to our customers’ accounts, based on trading week results.</p>
+                <p>The currency and stock markets allow us to significantly increase profits through their capitalization,<br> yet our investment strategies are designed primarily to preserve funds and minimize risks.</p>
+            </div><!--second-block__present-->
+        </div><!--present-content-->
+
+        <!--img-paste-->
+        <div class="content-doc">
+            <p>почему мы?</p>
+            <p>Crypto Land Fund is more than<br> just an investment company</p>
+            <div class="item-first">
+                <img src="" alt="">
+                <h3>Licensed and Regulated Company</h3>
+                <p>brand is a trademark of Reso-<br> nance Fund Management Limit-<br> ed, which complies with all
+                </p>
+                <img src="" alt="">
+                <h3>Known Worldwide</h3>
+                <p>Our company has more than<br> 25,000 customers in 62 count-<br> ries on 5 continents</p>
+            </div>
+            <div class="item-second">
+                <img src="" alt="">
+                <h3>Special Attitude to Customers</h3>
+                <p>Investment size does not matter. For Reso-<br> nance Capital, the needs and desires of our customers are our<br> main priority</p>
+                <img src="" alt="">
+                <h3>Set of Promotional Tools</h3>
+                <p>Our customers can participate<br> in the agency program</p>
+            </div>
+            <div class="item-third">
+                <img src="" alt="">
+                <h3>Transparent and Fair Conditions</h3>
+                <p>At Crypto Land Fund, we directly and<br> openly declare the terms of engagement<br> with no hidden provisions.</p>
+                <img src="" alt="">
+                <h3>Ease and Convenience</h3>
+                <p>We've designed our services and<br> our tools with our customers in<br> mind. You will find that transactions and interactions</p>
+            </div>
+        </div><!--content-doc-->
+
+        <!--background-laptop-->
+        <div class="main-block">
+            <div class="laptop-menu">
+                <nav>
+                    <ul>
+                        <li><a href="">our strategy</a>
+                        </li>
+                        <li><a href="">our advantages</a>
+                        </li>
+                        <li><a href="">profit statistics</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!--laptop-menu-->
+            <div class="laptop-menu">
+                <div class="img-first">
+                    <img src="" alt="">
+                    <p>Crypto Land Fund has developed<br> a number of optimal investment strategies</p>
+                </div>
+                <div class="img-second">
+                    <img src="" alt="">
+                    <p>The company's activities relate to<br> the trading in currency pairs in the Forex </p>
+                </div>
+                <div class="img-third">
+                    <img src="" alt="">
+                    <p>Cooperating with the world's largest<br> brokers, we will confidently offer you a </p>
+                </div>
+                <div class="img-fourth">
+                    <img src="" alt="">
+                    <p>We increase current assets by attra-<br> cting a wide range of investors.</p>
+                </div>
+            </div>
+        </div><!--main-block-->
+
+        <!--invest-steps-->
+        <div class="invest-steps">
+            <h1>How to become our investor in three easy steps</h1>
+            <div class="invest-steps__info">
+
+                <div class="info-block">
+                    <p>
+                        Register and confirm<br> your account
+                    </p>
+
+                    <p>
+                        On our website, you can find a<br> convenient registration form<br> consisting of several simple fields. Just in<br> case, we use special<br> technologies to correct any of your <br> registration mistakes, even<br> intentional.
+                    </p>
+                </div><!--info-block-->
+
+                <div class="info-block">
+                    <p>
+                        Choose an investment<br> portfolio that fits your needs
+                    </p>
+                    <p>
+                        Once in the back office, review the list of<br> investment portfolios and choose one to<br> invest in.
+                    </p>
+                </div><!--info-block-->
+
+                <div class="info-block">
+                    <p>
+                        Fund the account in a convenient<br> way and buy a portfolio
+                    </p>
+                    <p>
+                        You can easily make a deposit to your<br> account via bank transfer or electronic<br> payment systems.
+                    </p>
+                </div><!--info-block-->
+
+            </div><!--invest-steps__info-->
+
+        </div><!--invest-steps-->
+
+    </div><!--wrapper-->
+    <script src="js/jquery.min.js"></script>
+</body>
+</html>
